@@ -1,26 +1,20 @@
-<body>
-    <h1>Editing Book</h1>
+<h1>Editing Book</h1>
 
-<form class="edit_book" id="edit_book_45266" action="/books/45266" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="Od7/5hE/utYH4D94db6eQeXlFY5wrZf4xHODB5BOxZt0rYainYz1ZixciBRBqz4q+7GWWYDb+QZw5rp5GbcQyg==">
-
+<div class="form">
+<%= form_with model: @book, local:true do |f| %>
   <div class="field">
-    <label for="book_title">Title</label>
-    <input class="book_title" type="text" value="トラブル知らずのシステム設計" name="book[title]" id="book_title">
+    <p>Title</p>
+    <%= f.text_field :title %>
   </div>
-
   <div class="field">
-    <label for="book_body">Body</label>
-    <textarea class="book_body" name="book[body]" id="book_body">システム設計の要点を図解で説明してくれます</textarea>
+    <p>Body</p>
+    <%= f.text_area :body %>
   </div>
+    <%= f.submit 'Update Book' %>
 
-  <div class="actions">
-    <input type="submit" name="commit" value="Update Book" data-disable-with="Update Book">
-  </div>
-</form>
+<% end %>
+</div>
 
-<a class="show_45266" href="/books/45266">Show</a> |
-<a class="back" href="/books">Back</a>
-
-
-
-</body>
+<%= link_to "Show", '/books/show' %>
+｜
+<%= link_to "Back", '/books' %>
