@@ -1,2 +1,14 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<p id="notice"></p>
+<p>
+  <strong>Title:</strong>
+  トラブル知らずのシステム設計
+</p>
+<p>
+  <strong>Body:</strong>
+  システム設計の要点を図解で説明してくれます
+</p>
+<a class="edit_45266" href="/books/45266/edit">Edit</a>
+ |
+
+<a class="back" href="/books">Back</a>
+<%= book_to "削除", destroy_book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
