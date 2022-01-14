@@ -1,12 +1,13 @@
-<div class="show">
+<p id="notice"></p>
+<p>
   <strong>Title:</strong>
   <span><%= @book.title %></span>
-</div>
-<div class="show">
+</p>
+<p>
   <strong>Body:</strong>
   <span><%= @book.body %></span>
-</div>
+</p>
 
-<%= link_to "Edit", '/books/edit' %>
-|
-<%= link_to "Back", '/books' %>
+ <%= link_to "Edit", edit_book_path(@book.id) %>
+ |
+ <%= link_to "Back", '/books' %>
