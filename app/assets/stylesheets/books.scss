@@ -10,32 +10,32 @@
   border-color: grey;
 }
 
-.database {
-  display: table;
-  border-collapse: separate;
-  box-sizing: border-box;
-  text-indent: initial;
-  border-spacing: 2px;
-  border-color: grey;
+#notice {
+  color: green;
 }
 
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
 
-.show {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  margin: 33px;
+h1 {
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  font-weight: bold;
 }
 
-.form {
-  display: block;
-  margin-top: oem;
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
 }
+
 
 
 p {
