@@ -1,7 +1,6 @@
 <h1>Editing Book</h1>
 
-<form>
-<%= form_with model: @book, url: update_book_path(@book.id), method: :patch, local:true do |f| %>
+<%= form_with model:@book, local:true do |f| %>
   <div class="field">
     <label>Title</label>
     <%= f.text_field :title %>
@@ -14,8 +13,7 @@
     <%= f.submit 'Update Book' %>
   </div>
 <% end %>
-</form>
 
-<%= link_to "Show", book_path(book.id), "data-confirm" => "Book was successfully updated." %>
+<%= link_to "Show", book_path(@book.id), method: :get %>
 ｜
 <%= link_to "Back", '/books' %>
